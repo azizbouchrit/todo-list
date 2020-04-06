@@ -1,0 +1,14 @@
+.add-item-form {
+    display: flex;
+}
+
+.todo-item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+span {
+    align-items: center;
+}
