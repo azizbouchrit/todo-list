@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./toDolist.css";
-import ToDoItem from "./toDoItem";
+import ToDoItem from "./ToDoItem";
 import axios from "axios";
 
 class ToDolist extends Component {
@@ -11,7 +11,7 @@ class ToDolist extends Component {
 
   async componentDidMount() {
     const { data } = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos"
+      "https://jsonplaceholder.typicode.com/todos?_limit=10"
     );
     console.log(data);
     this.setState({ toDolist: data, mainToDoList: data });
@@ -99,7 +99,7 @@ class ToDolist extends Component {
             ADD
           </button>
         </form>
-        <ul className='list-group mt-4'>
+        <ul className='list-group my-4'>
           {this.state.toDolist.map((listItem) => (
             <ToDoItem
               key={listItem.id}

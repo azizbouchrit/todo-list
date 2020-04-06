@@ -34,7 +34,7 @@ const ToDoItem = (props) => {
           {listItem.title}
         </span>
       ) : (
-        <form onSubmit={handleEdit}>
+        <form className="edit-form" onSubmit={handleEdit}>
           <input
             type='text'
             className='form-control'
